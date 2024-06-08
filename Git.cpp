@@ -91,6 +91,43 @@ public:
 };
 
 
+class Fiveangle {
+    vector<point> Tria;
+public:
+    Fiveangle() {}
+    Fiveangle(point a, point b, point c, point d, point s) {
+        Tria.push_back(a);
+        Tria.push_back(b);
+        Tria.push_back(c);
+        Tria.push_back(d);
+        Tria.push_back(s);
+    }
+    void SetTriangle() {
+        Tria.clear();
+        point tmp;
+        for (int i = 0; i < 5; i++)
+        {
+            tmp.SetPoint();
+            Tria.push_back(tmp);
+        }
+    }
+    void PrintTriangle() {
+        for (int i = 0; i < 5; i++)
+        {
+            cout << i + 1 << " point:\n";
+            Tria[i].PrintXandY();
+            cout << "\n";
+        }
+    }
+};
+
+
+
+
+
+
+
+
 
 
 
