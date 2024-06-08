@@ -141,7 +141,11 @@ public:
 
 int main()
 {
-    Triangle abc({ 1,2 }, { 2,8 }, { 5,1 });
-    abc.PrintTriangle();
+    
+
+
+    //XD
+    //XD
+    //XD
 }
 
