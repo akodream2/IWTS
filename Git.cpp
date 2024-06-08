@@ -61,6 +61,46 @@ public:
 
 
 
+class Fourangle {
+    vector<point> Tria;
+public:
+    Fourangle() {}
+    Fourangle(point a, point b, point c, point d) {
+        Tria.push_back(a);
+        Tria.push_back(b);
+        Tria.push_back(c);
+        Tria.push_back(d);
+    }
+    void SetTriangle() {
+        Tria.clear();
+        point tmp;
+        for (int i = 0; i < 4; i++)
+        {
+            tmp.SetPoint();
+            Tria.push_back(tmp);
+        }
+    }
+    void PrintTriangle() {
+        for (int i = 0; i < 4; i++)
+        {
+            cout << i + 1 << " point:\n";
+            Tria[i].PrintXandY();
+            cout << "\n";
+        }
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
 
 int main()
 {
