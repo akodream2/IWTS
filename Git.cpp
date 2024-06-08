@@ -21,10 +21,41 @@ public:
     void PrintXandY() {
         cout << "X:" << x << "|| Y:" << y;
     }
-
+    void SetPoint() {
+        cout << "X:";
+        cin >> x;
+        cout << "Y:";
+        cin >> y;
+    }
 };
 
-
+class Triangle {
+    vector<point> Tria;
+public:
+    Triangle(){}
+    Triangle(point a, point b, point c) {
+        Tria.push_back(a);
+        Tria.push_back(b);
+        Tria.push_back(c);
+    }
+    void SetTriangle() {
+        Tria.clear();
+        point tmp;
+        for (int i = 0; i < 4; i++)
+        {
+            tmp.SetPoint();
+            Tria.push_back(tmp);
+        }
+    }
+    void PrintTriangle() {
+        for (int i = 0; i < 3; i++)
+        {
+            cout << i + 1 << " point:\n";
+            Tria[i].PrintXandY();
+            cout << "\n";
+        }
+    }
+};
 
 
 
@@ -33,6 +64,7 @@ public:
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Triangle abc({ 1,2 }, { 2,8 }, { 5,1 });
+    abc.PrintTriangle();
 }
 
