@@ -29,7 +29,19 @@ public:
     }
 };
 
-class Triangle {
+
+class vigure {
+public:
+    virtual void PrintFigure() {
+        cout << "???";
+    }
+    virtual void SetFigure() {
+        cout << "???";
+    }
+};
+
+
+class Triangle : public vigure {
     vector<point> Tria;
 public:
     Triangle(){}
@@ -38,7 +50,7 @@ public:
         Tria.push_back(b);
         Tria.push_back(c);
     }
-    void SetTriangle() {
+    virtual void SetFigure() {
         Tria.clear();
         point tmp;
         for (int i = 0; i < 4; i++)
@@ -47,7 +59,7 @@ public:
             Tria.push_back(tmp);
         }
     }
-    void PrintTriangle() {
+    virtual void PrintFigure() {
         for (int i = 0; i < 3; i++)
         {
             cout << i + 1 << " point:\n";
@@ -61,7 +73,7 @@ public:
 
 
 
-class Fourangle {
+class Fourangle: public vigure {
     vector<point> Tria;
 public:
     Fourangle() {}
@@ -71,7 +83,7 @@ public:
         Tria.push_back(c);
         Tria.push_back(d);
     }
-    void SetTriangle() {
+    virtual void SetFigure() {
         Tria.clear();
         point tmp;
         for (int i = 0; i < 4; i++)
@@ -80,7 +92,7 @@ public:
             Tria.push_back(tmp);
         }
     }
-    void PrintTriangle() {
+    virtual void PrintFigure() {
         for (int i = 0; i < 4; i++)
         {
             cout << i + 1 << " point:\n";
@@ -141,7 +153,11 @@ public:
 
 int main()
 {
-    
+    Triangle a;
+    a.SetFigure();
+    a.PrintFigure();
+
+
 
 
     //XD
